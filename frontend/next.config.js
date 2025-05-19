@@ -10,6 +10,10 @@ const nextConfig = {
   // Use this to set Nx-specific options
   // See: https://nx.dev/recipes/next/next-config-setup
   nx: {},
+  env: {
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || 'https://your-backend-service.onrender.com',
+  },
+  output: 'standalone',
 };
 
 const plugins = [
